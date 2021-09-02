@@ -1,6 +1,6 @@
 package fp.daw.exprog20210902;
 
-public class Automovil {
+public class Automovil implements Comparable<Automovil>{
 
 	String marca;
 	String modelo;
@@ -73,7 +73,19 @@ public class Automovil {
 		return potencia;
 	}
 	
-	//
+	///
+	
+	public int compareTo(Automovil a) {
+		
+		return marca.compareTo(a.marca);
+	}
+	
+	public String toString() {
+		
+		return "Marca: " + marca + ". Modelo: " + modelo + ". Matricula: " + matricula + ". Anyo de fabricacion: " +
+		 anoFab + ". Tipo de motor:" + tipoMotor + ". Potencia: " + potencia + "\n";
+	}
+	///
 	
 	
 }
